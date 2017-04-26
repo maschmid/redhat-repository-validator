@@ -10,12 +10,14 @@ import org.apache.http.client.methods.HttpUriRequest;
 import org.apache.http.client.methods.RequestBuilder;
 import org.apache.http.impl.client.HttpClients;
 import org.junit.Test;
+import org.junit.Ignore;
 
 import com.redhat.repository.validator.impl.remoterepository.ChecksumProviderNginx;
 
 public class TestChecksumProviderNginx {
 
     @Test
+    @Ignore("repo1.maven.org now uses a different checksum mechanism")
     public void shouldParseHashFromHeaders() throws Exception {
         ChecksumProviderNginx providerNginx = new ChecksumProviderNginx();
         
